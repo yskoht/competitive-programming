@@ -20,6 +20,10 @@ class UnionFind
     root(a) == root(b)
   end
 
+  def size(a)
+    return -@data[root(a)]
+  end
+
   def root(a)
     return a if @data[a] < 0
     @data[a] = root(@data[a])
